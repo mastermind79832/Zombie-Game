@@ -62,8 +62,6 @@ public class PlayerController : MonoBehaviour
 		if (b_MoveForward && (Mathf.Abs(m_Rigidbody.velocity.z) < m_MaxMoveSpeed))
 		{
 			m_Rigidbody.velocity += m_MoveSpeed * Time.fixedDeltaTime * transform.forward;
-		}
+		}		
 	}
-
-
 }

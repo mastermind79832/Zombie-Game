@@ -211,7 +211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100852525}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.494, y: 0, z: 0}
+  m_LocalPosition: {x: 19.68, y: 0, z: -0.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -275,6 +275,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8fc67d70958d0a64e8d4d4de89cd434a, type: 3}
   m_PrefabInstance: {fileID: 1803189140}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &395996062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7883749328917080035, guid: 8fc67d70958d0a64e8d4d4de89cd434a, type: 3}
+  m_PrefabInstance: {fileID: 1803189140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &395996064
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395996062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: 0.1, y: 0, z: 0}
 --- !u!1 &615774650
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +428,52 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 15dfddf746919ad4aa23e2c77bd10910, type: 3}
   m_PrefabInstance: {fileID: 62010895}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &883269877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 883269878}
+  - component: {fileID: 883269879}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &883269878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883269877}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.6223645, y: 0.77410686, z: -2.9793339}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &883269879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883269877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2e8294ec609a5448437f53c9f496e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 100852527}
+  enemyController: {fileID: 1240155207}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1240155205}
   - component: {fileID: 1240155206}
+  - component: {fileID: 1240155207}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -543,6 +608,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &1240155207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240155204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5509de4fd9cc87d46bdf8f712165ea5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MoveSpeed: 3
+  m_DetectionRange: 10
+  m_AttackRange: 1
+  m_Rigidbody: {fileID: 1240155206}
+  m_Animator: {fileID: 1422700325}
+--- !u!95 &1422700325 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 8fc67d70958d0a64e8d4d4de89cd434a, type: 3}
+  m_PrefabInstance: {fileID: 1803189140}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1803189140
 PrefabInstance:
   m_ObjectHideFlags: 0
